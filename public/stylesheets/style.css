@@ -1,0 +1,25 @@
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+#map {
+  height: 100%;
+  width: 80%;
+  display: inline-block;
+}
+
+#form {
+  height: 100%;
+  width: 16%;
+  float: left;
+  padding: 40px 2%;
+}
+
+body {
+  margin:0;
+  padding:0px;
+  font:14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color:#00B7FF;
+}

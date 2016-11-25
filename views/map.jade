@@ -1,0 +1,40 @@
+extends layout.jade
+
+block content
+   #map
+    script(type='text/javascript').
+        var myData = !{JSON.stringify(jsonData)};
+        var map = L.map('map').setView([55.676, 12.568], 12);
+           L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+               attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery � <a href="http://mapbox.com">Mapbox</a>',
+               maxZoom: 18,
+               id: 'clarineo.23o81n9e',
+               accessToken: 'pk.eyJ1IjoiY2xhcmluZW8iLCJhIjoiY2l2aDJocjZ0MDA1ajJvb3djeTdidWxyaSJ9.HVE2DplZgfv5T4FSUqah7A'
+           }).addTo(map);
+
+        L.geoJson(myData, {
+            onEachFeature: function (feature, layer) {
+                layer.bindPopup(feature.properties.f2);
+            }
+        }).addTo(map);
+
+        new L.Control.GeoSearch({
+            provider: new L.GeoSearch.Provider.OpenStreetMap()
+        }).addTo(map);
+
+        var overlayMaps = {
+            "biblioteker": myData
+        };
+
+        L.control.layers(overlayMaps).addTo(map);
+
+   #form
+
+    form(method='post', action='/user')
+        label(for='distance') Show features within
+        input(type='text', name='distance')
+        br
+        label(for='featureName') km of features named
+        input(type='text', name='featureName')
+        input(type='submit', value='submit')
+
