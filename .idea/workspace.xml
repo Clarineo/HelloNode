@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ea92ad4d-b36c-4fc4-b405-8faf3f839654" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+    <list default="true" id="ea92ad4d-b36c-4fc4-b405-8faf3f839654" name="Default" comment="superfluous code removed from index file">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="HelloNode.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -249,12 +247,20 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1479597389076</updated>
-      <workItem from="1480335949350" duration="120000" />
+      <workItem from="1480335949350" duration="366000" />
     </task>
+    <task id="LOCAL-00001" summary="superfluous code removed from index file">
+      <created>1480336104688</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1480336104688</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="120000" />
+    <option name="totallyTimeSpent" value="366000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="450" y="0" width="916" height="728" extended-state="0" />
@@ -313,6 +319,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="superfluous code removed from index file" />
+    <option name="LAST_COMMIT_MESSAGE" value="superfluous code removed from index file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
