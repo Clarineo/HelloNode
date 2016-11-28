@@ -16,42 +16,6 @@ router.get('/', function(req,res) {
   });
 });
 
-/* GET Hello World Page. */
-router.get('/helloworld', function(req,res) {
-  res.render('helloworld', {
-      title: 'Hello World'
-  });
-});
-
-/* GET Postgres JSON data. */
-router.get('/data', function (req, res) {
-    var client = new pg.Client(conString);
-    client.connect();
-    var query = client.query(biblioteker_query);
-    query.on("row", function (row, result) {
-        result.addRow(row);
-    });
-    query.on("end", function (result) {
-        res.send(result.rows[0].row_to_json);
-        res.end();
-    });
-});
-
-
-/* GET Postgres JSON data. */
-router.get('/info', function (req, res) {
-    var client = new pg.Client(conString);
-    client.connect();
-    var query = client.query(trafiktal_query);
-    query.on("row", function (row, result) {
-        result.addRow(row);
-    });
-    query.on("end", function (result) {
-        res.send(result.rows[0].row_to_json);
-        res.end();
-    });
-});
-
 /* GET the map page. */
 
 router.get('/map', function(req, res) {
@@ -66,22 +30,6 @@ router.get('/map', function(req, res) {
         res.render('map', {
             title: "Semester 1 Project",
             jsonData: data
-        });
-    });
-});
-
-router.get('/trafiktal', function(req, res) {
-    var client = new pg.Client(conString);
-    client.connect();
-    var query = client.query(trafiktal_query);
-    query.on("row", function (row, result) {
-        result.addRow(row);
-    });
-    query.on("end", function (result) {
-        var info = result.rows[0].row_to_json
-        res.render('map', {
-            title: "Semester 1 Project",
-            jsonData: info
         });
     });
 });
